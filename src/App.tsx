@@ -34,8 +34,9 @@ function App() {
         </Routes>
       </body>
 
-      <footer className="bg-primary-500 w-full p-2">
+      <footer className="bg-primary-500 w-full">
         <FooterLocationInformation locations={locationData}/>
+        <p className="text-primary-200 px-6 text-md text-center font-raleway">&copy; 2022 Justin Mercer</p>
       </footer>
     </div>
   );

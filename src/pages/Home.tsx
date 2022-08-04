@@ -18,10 +18,10 @@ export default function HomePage() {
                 </p>
             </div>
 
-            <img className="aspect-square col-span-3 lg:col-span-2" src={`${process.env.PUBLIC_URL}/hairstyletwo.jpg`} alt="Hairstyle #2"/>
+            <img className="aspect-square col-span-3 lg:col-span-2 w-full" src={`${process.env.PUBLIC_URL}/home_img1.jpg`} alt="Hairstyle #2"/>
             <div className="grid grid-cols-1 grid-rows-auto hidden lg:block">
-                <img className="aspect-square" src={`${process.env.PUBLIC_URL}/hairstyleone.jpg`} alt="Hairstyle #1"/>
-                <img className="aspect-square" src={`${process.env.PUBLIC_URL}/hairstylethree.jpg`} alt="Hairstyle #3"/>
+                <img className="aspect-square w-full" src={`${process.env.PUBLIC_URL}/home_img4.jpg`} alt="Hairstyle #1"/>
+                <img className="aspect-square w-full" src={`${process.env.PUBLIC_URL}/home_img3.jpg`} alt="Hairstyle #3"/>
             </div>
 
         </div>

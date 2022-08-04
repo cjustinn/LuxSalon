@@ -51,9 +51,9 @@ export default function ServicesPage() {
                 </p>
             </div>
 
-            <img className="aspect-square w-full col-span-3 lg:col-span-1 mb-2" alt="Stock hair salon." src={`${process.env.PUBLIC_URL}/hairstyleone.jpg`}/>
-            <img className="aspect-square w-full hidden lg:block col-span-1 mb-2" alt="Stock hair salon." src={`${process.env.PUBLIC_URL}/hairstyletwo.jpg`}/>
-            <img className="aspect-square w-full hidden lg:block col-span-1 mb-2" alt="Stock hair salon." src={`${process.env.PUBLIC_URL}/hairstylethree.jpg`}/>
+            <img className="aspect-square w-full col-span-3 lg:col-span-1 mb-2 w-full" alt="Stock hair salon." src={`${process.env.PUBLIC_URL}/services_img1.jpg`}/>
+            <img className="aspect-square w-full hidden lg:block col-span-1 mb-2 w-full" alt="Stock hair salon." src={`${process.env.PUBLIC_URL}/services_img2.jpg`}/>
+            <img className="aspect-square w-full hidden lg:block col-span-1 mb-2 w-full" alt="Stock hair salon." src={`${process.env.PUBLIC_URL}/services_img3.jpg`}/>
 
             <div className="col-span-3 w-full h-auto p-5">
                 {

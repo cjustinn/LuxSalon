@@ -36,7 +36,7 @@ function App() {
 
       <footer className="bg-primary-500 w-full">
         <FooterLocationInformation locations={locationData}/>
-        <p className="text-primary-200 px-6 text-md text-center font-raleway">&copy; 2022 Justin Mercer</p>
+        <p className="text-primary-200 px-6 text-md text-center font-raleway hover:opacity-75"><a href="https://github.com/cjustinn/LuxSalon" target="_blank" rel="noreferrer">&copy; 2022 Justin Mercer</a></p>
       </footer>
     </div>
   );

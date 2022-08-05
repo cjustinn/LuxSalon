@@ -1,20 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import TestimonialCard from '../components/TestimonialCard';
+import env from 'react-dotenv';
 
 export default function HomePage() {
 
+    const [ testimonials, setTestimonials ] = useState([]);
+
+    useEffect(() => {
+
+        fetch(`${env.API_URL}/api/testimonials`).then(resp => resp.json()).then((_t: any) => {
+            if (_t.data) {
+                setTestimonials(_t.data);
+            }
+        });
+
+    }, []);
+
     return (
         <div className="grid grid-cols-3 grid-rows-auto">
-            <div className="col-span-3 text-center py-20" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/homeheader.jpg)`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPositionY: -650 }}>
+            <div className="col-span-3 text-center py-20" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/homeheader.jpg)`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPositionY: "75%" }}>
                 <p className="text-accent-100 text-6xl uppercase font-bold font-title pb-6" style={{ textShadow: '0px 0px 0.5rem rgba(0, 0, 0, 0.75)' }}>Welcome to Lux</p>
                 <p className="text-gray-100 text-xl font-light font-raleway w-full px-3 lg:px-0 lg:w-1/2 lg:mx-auto"  style={{ textShadow: '0px 0px 0.5rem rgba(0, 0, 0, 0.75)' }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et feugiat sem. In consectetur augue id erat egestas, ac malesuada tortor congue. Fusce sagittis tincidunt accumsan. In a ante a ante auctor lobortis. Aenean nisi sem, aliquam suscipit ligula id, semper egestas nunc. Phasellus vitae dui tortor. Aliquam dignissim lacus nisl. Phasellus congue felis lorem, sit amet tristique turpis condimentum sit amet. Vestibulum enim nisl, venenatis lacinia nisi eu, viverra interdum ligula. Sed non tortor orci.
+                We provide people with a calm and tranquil place to put themselves first for a while. We are committed to providing our clients with treatments that are not only good for them but also good for the planet. It is important to us that each of our clients leaves Lux feeling their best.
                 </p>
             </div>
 
             <div className="col-span-3 text-center py-20 bg-primary-300">
                 <p className="text-accent-100 text-5xl uppercase font-bold font-title pb-6">Who are we?</p>
                 <p className="text-gray-100 text-xl font-light font-raleway w-full px-3 lg:px-0 lg:w-1/2 lg:mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut tortor vitae nulla consectetur venenatis. Nulla facilisi. Cras posuere odio nulla, eu mollis nibh ultricies eget. Praesent dui augue, elementum pretium vehicula sit amet, euismod eget eros. Aliquam eget risus in mauris mattis vestibulum id vel urna. Phasellus posuere augue quis tellus semper auctor. Nulla volutpat felis tincidunt hendrerit hendrerit. Integer ut vulputate lacus, non sollicitudin mi. Ut viverra lacus dolor, id molestie risus bibendum vitae. Quisque non diam eu ante volutpat consequat. Nunc suscipit magna sit amet tempor dapibus. Vivamus in eleifend lorem, quis imperdiet lorem. Nunc tincidunt massa ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis metus eget libero iaculis sollicitudin. Pellentesque sit amet mi viverra, elementum turpis in, lobortis magna.
+                Welcome to Lux Salon. We are a sustainable at home salon located in North Oshawa, specializing in colour, styling, and cuts. We are committed to helping you feel your best. We are open 5 days a week and are always happy to meet new people. 					
                 </p>
             </div>
 
@@ -24,6 +38,17 @@ export default function HomePage() {
                 <img className="aspect-square w-full" src={`${process.env.PUBLIC_URL}/home_img3.jpg`} alt="Hairstyle #3"/>
             </div>
 
+            <div className="col-span-3 text-center py-20">
+                <p className="text-accent-100 text-5xl uppercase font-bold font-title">Testimonials</p>
+                <p className="text-gray-100 text-xl font-light font-raleway w-full pb-6 px-3 lg:px-0 lg:w-1/2 lg:mx-auto">Check out real testimonials from our customers!</p>
+                <p className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4 grid-rows-auto px-4">
+                    {
+                        testimonials.map((_testimonial: any) => {
+                            return <TestimonialCard testimonial={_testimonial}/>
+                        })
+                    }
+                </p>
+            </div>
         </div>
     )
 

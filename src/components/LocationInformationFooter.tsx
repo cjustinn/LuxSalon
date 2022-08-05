@@ -64,7 +64,7 @@ export default function FooterLocationInformation(props: any) {
                 <p className="text-white text-4xl font-black uppercase mb-3 font-title">Reach Out</p>
                 
                 <p className="text-white text-lg uppercase font-title">Email</p>
-                <a className="text-gray-200 text-md hover:opacity-75 font-raleway" href="mailto:example@example.com"><span>example@example.com</span></a>
+                <a className="text-gray-200 text-md hover:opacity-75 font-raleway" href="mailto:luxsalon@gmail.com"><span>luxsalon@gmail.com</span></a>
             </div>
 
             <div className="text-center px-4 lg:text-start my-3">
@@ -88,7 +88,7 @@ export default function FooterLocationInformation(props: any) {
         </div>
     } else if (locations.length === 1) {
         footer = <div className="px-2 grid grid-cols-1 lg:grid-cols-3 text-center lg:text-start">
-            <div className="px-4">
+            <div className="px-4 my-3">
                 <p className="text-white text-4xl font-black uppercase mb-3 font-title">Reach Out</p>
 
                 <div className="mb-3">
@@ -98,7 +98,7 @@ export default function FooterLocationInformation(props: any) {
 
                 <div className="mb-3">
                     <p className="uppercase font-bold font-title text-accent-100 text-xl">Email</p>
-                    <a className="text-md text-gray-100 hover:opacity-75 font-raleway" href="mailto:salon@example.com">salon@example.com</a>
+                    <a className="text-md text-gray-100 hover:opacity-75 font-raleway" href="mailto:luxsalon@gmail.com">luxsalon@gmail.com</a>
                 </div>
                 
                 <div>
@@ -140,12 +140,12 @@ export default function FooterLocationInformation(props: any) {
         </div>
     } else {
         footer = <div className="px-2 grid grid-cols-1 lg:grid-cols-2">
-            <div className="text-start px-4">
+            <div className="text-start px-4 my-3">
                 <p className="text-white text-4xl font-black uppercase mb-3 font-title">Reach Out</p>
 
                 <div className="mb-3">
                     <p className="uppercase font-bold font-title text-accent-100 text-xl">Email</p>
-                    <a className="text-md text-gray-100 hover:opacity-75 font-raleway" href="mailto:salon@example.com">salon@example.com</a>
+                    <a className="text-md text-gray-100 hover:opacity-75 font-raleway" href="mailto:luxsalon@gmail.com">luxsalon@gmail.com</a>
                 </div>
             </div>
             <div className="text-start px-4">

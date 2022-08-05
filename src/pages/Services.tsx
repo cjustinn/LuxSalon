@@ -18,7 +18,8 @@ export default function ServicesPage() {
                         categories[idx].services.push({
                             name: service.name,
                             price: service.price,
-                            variable: service.variablePrice
+                            variable: service.variablePrice,
+                            consultation: service.consultation
                         });
                     } else {
                         categories.push({
@@ -26,7 +27,8 @@ export default function ServicesPage() {
                             services: [ {
                                 name: service.name,
                                 price: service.price,
-                                variable: service.variablePrice
+                                variable: service.variablePrice,
+                                consultation: service.consultation
                             } ]
                         });
                     }
@@ -73,7 +75,14 @@ export default function ServicesPage() {
                                             return (
                                                 <tr className={`${index % 2 === 0 ? 'bg-primary-400' : 'bg-primary-300'} hover:opacity-75 hover:cursor-default`}>
                                                     <td className="w-3/4 border border-primary-200 px-3 font-raleway text-white">{service.name}</td>
-                                                    <td className="w-3/4 border border-primary-200 px-3 font-raleway text-white text-center lg:text-start">{`${service.variable ? 'Starting from' : ''} \$${service.price.toFixed(2)}`}</td>
+                                                    <td className="w-3/4 border border-primary-200 px-3 font-raleway text-white text-center lg:text-start">
+                                                        {
+                                                            service.consultation ?
+                                                            `Consultation Required`
+                                                            :
+                                                            `${service.variable ? 'Starting from' : ''} \$${service.price.toFixed(2)}`
+                                                        }
+                                                    </td>
                                                 </tr>
                                             )
                                         })

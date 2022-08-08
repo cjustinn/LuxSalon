@@ -26,11 +26,11 @@ export default function Navbar() {
                         <span>Home</span>
                     </Link>
                 </li>
-                <li className="nav-item">
+                {/*<li className="nav-item">
                     <Link to="/about" className="px-3 py-2 flex items-center text-sm uppercase font-light md:font-bold leading-snug text-white hover:opacity-75 hover:text-accent-100">
                         <span>About</span>
                     </Link>
-                </li>
+                </li>*/}
                 <li className="nav-item">
                     <Link to="/services" className="px-3 py-2 flex items-center text-sm uppercase font-light md:font-bold leading-snug text-white hover:opacity-75 hover:text-accent-100">
                         <span>Services</span>

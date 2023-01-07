@@ -12,8 +12,10 @@ import FooterLocationInformation from './components/LocationInformationFooter';
 import ServicesPage from './pages/Services';
 
 function App() {
+  // React state array used to hold all of the salon locations that are fetched from the database.
   const [ locationData, setLocationData ] = useState<[]>([]);
 
+  // As soon as the app loads, use the API to fetch all locations from the database and store the returned result into the locationData state array.
   useEffect(() => {
     fetch(`${env.API_URL}/api/location?mode=full`).then(resp => resp.json()).then(locations => {
       setLocationData(locations.data);

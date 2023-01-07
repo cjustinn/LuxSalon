@@ -4,8 +4,10 @@ import env from 'react-dotenv';
 
 export default function HomePage() {
 
+    // React state array to hold the testimonials which are fetched from the API.
     const [ testimonials, setTestimonials ] = useState([]);
 
+    // As soon as the page loads, use the API endpoint for getting testimonials from the MySQL database and save the returned data to the testimonials state array.
     useEffect(() => {
 
         fetch(`${env.API_URL}/api/testimonials`).then(resp => resp.json()).then((_t: any) => {

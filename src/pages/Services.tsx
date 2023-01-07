@@ -4,16 +4,20 @@ import env from 'react-dotenv';
 
 export default function ServicesPage() {
 
+    // React state array used to hold the list of services / products which are fetched from the MySQL database using the API.
     const [ services, setServices ] = useState<any[]>([]);
 
+    // As soon as the page loads, use the API endpoint to fetch all services from the database.
     useEffect(() => {
         fetch(`${env.API_URL}/api/services`).then(resp => resp.json()).then(results => {
             if (results.data) {
                 let categories: any[] = [];
 
+                // Iterate through all of the returned services, and group them by their category name, adding them to the 'categories' array.
                 results.data.forEach((service: any) => {
                     let idx = categories.findIndex(c => c.name === service.category);
 
+                    // If an element in the categories array already exists which matches the name of the current service's category, add the current service to that element's list of services.
                     if (idx > -1) {
                         categories[idx].services.push({
                             name: service.name,
@@ -21,7 +25,9 @@ export default function ServicesPage() {
                             variable: service.variablePrice,
                             consultation: service.consultation
                         });
-                    } else {
+                    } 
+                    // If an element in the categories array which matches the name of the current service's category does not exist yet, make one.
+                    else {
                         categories.push({
                             name: service.category,
                             services: [ {
@@ -35,6 +41,7 @@ export default function ServicesPage() {
 
                 });
 
+                // Set the services state array value to the value of the categories array.
                 setServices(categories);
             }
         });

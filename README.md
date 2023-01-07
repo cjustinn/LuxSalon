@@ -1,46 +1,22 @@
-# Getting Started with Create React App
+## :label: Description
+This project was made for my sister to use as part of a school business presentation where she had to design and plan a hair salon. I was asked to put together a concept website that could serve her planned business that she could show as part of her presentation.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo has the front-end side of the project, and was built using React, TailwindCSS, React Router, and some other npm packages.
 
-## Available Scripts
+## :computer: Technologies
+For this project, the front-end was built using the following technologies:
 
-In the project directory, you can run:
+![React](https://img.shields.io/badge/-React-61dbfb?style=for-the-badge&logo=react&logoColor=grey)
+![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-07b0ce?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![React Router](https://img.shields.io/badge/-React%20Router-c5021a?style=for-the-badge&logo=reactrouter&logoColor=white)
 
-### `npm start`
+On the backend side of the project, the following technologies were used:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![MySQL](https://img.shields.io/badge/-MySQL-dd8a00?style=for-the-badge&logo=mysql&logoColor=white)
+![Node.js](https://img.shields.io/badge/-Node.js-75aa61?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/-Express.js-black?style=for-the-badge&logo=express&logoColor=white)
+![Express.js](https://img.shields.io/badge/-dotenv-e0ca3c?style=for-the-badge&logo=dotenv&logoColor=grey)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<sup>This README was last updated on Jan. 7th, 2023</sup>

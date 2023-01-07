@@ -1,7 +1,7 @@
 import React from 'react';
-import { FaInstagram } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
+// Sub-component which receives an address via it's props, and then breaks it down into pieces and formats it all together, returning the formatted address display.
 function AddressDisplay(props: any) {
     const { address } = props;
     const addrComponents = address.split(',');
@@ -15,6 +15,12 @@ function AddressDisplay(props: any) {
     );
 }
 
+/*
+    Receives an array of business hours, and returns a reformatted array where all back-to-back days with the same hours are joined together.
+    Ex. Input: Mon. 10 - 5, Tues. 10 - 5, Wed. 10 - 5, Thurs. 10 - 7, Fri. 10 - 7, Sun. 12 - 5
+    Ex. Output: Mon. to Wed. 10 - 5, Thurs. to Fri. 10 - 7, Sun. 12 - 5
+
+*/
 function parseHours(hours: [{ weekday: string, open_time: string, close_time: string }]) {
     let hourChart: any = [];
 
@@ -52,12 +58,21 @@ function parseHours(hours: [{ weekday: string, open_time: string, close_time: st
     return hourChart;
 }
 
+// Footer component function.
 export default function FooterLocationInformation(props: any) {
 
     const { locations } = props;
-    //const locations = [];
     let footer = null;
 
+    /*
+    
+        Format the footer component differently based on how many locations were fetched in the database
+
+        For no locations, display basic contact information and inform the user that there are no locations found.
+        For one location, display it's address along with basic contact information, as well as business hours.
+        For multiple locations, display a list of all of them which can be clicked to navigate to a location details page (unimplemented page).
+    
+    */
     if (!locations || locations.length < 1) {
         footer = <div className="px-2 grid grid-cols-1 lg:grid-cols-2">
             <div className="text-center lg:text-start px-4 my-3">
